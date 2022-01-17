@@ -1,0 +1,42 @@
+#browse-content {
+  div {
+    .header {
+      font-size: 7.2rem;
+      font-weight: normal;
+    }
+  }
+
+  #current-drops {
+    margin: 4rem 0 10rem;
+
+    &__items {
+      display: flex;
+      margin: 3rem 0;
+
+      div {
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  #upcoming-drops {
+    margin-bottom: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    h1 {
+      grid-column: 1 / span 2;
+    }
+
+    .item-card {
+      width: 100%;
+    }
+
+    .item-card:nth-of-type(2) {
+      grid-row: 2 / span 2;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
