@@ -1,3 +1,5 @@
+import { Routes, Route } from "react-router-dom";
+
 // Import Pages
 import Home from "./pages/Home";
 
@@ -8,7 +10,10 @@ function App() {
   return (
     <div>
       <Nav />
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/browse" element={<h1>Browse Items</h1>} />
+      </Routes>
     </div>
   );
 }
