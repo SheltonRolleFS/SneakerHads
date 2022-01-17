@@ -1,0 +1,64 @@
+#browse-content {
+  div {
+    .header {
+      margin-bottom: 3rem;
+      font-weight: normal;
+
+      @media ($desktop) {
+        font-size: 7.2rem;
+      }
+
+      @media ($tablet) {
+        font-size: 5rem;
+      }
+
+      @media ($mobile) {
+        font-size: 3.8rem;
+      }
+    }
+  }
+
+  #current-drops {
+    margin: 4rem 0 10rem;
+
+    &__items {
+      display: flex;
+
+      @media ($mobile) {
+        flex-direction: column;
+      }
+
+      div {
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  #upcoming-drops {
+    margin-bottom: 4rem;
+    @media ($desktop) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+
+      h1 {
+        grid-column: 1 / span 2;
+      }
+
+      .item-card {
+        width: 100%;
+      }
+
+      .item-card:nth-of-type(2) {
+        grid-row: 2 / span 2;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    @media ($tablet) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

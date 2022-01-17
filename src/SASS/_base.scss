@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $background-color;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Righteous", "Poppins", "Roboto", sans-serif;
+}
+
+@media ($tablet) {
+  .container {
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+}
+
+@media ($desktop) {
+  .container {
+    max-width: 80vw;
+    margin: 0 auto;
+  }
+}

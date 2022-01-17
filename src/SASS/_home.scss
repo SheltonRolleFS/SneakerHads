@@ -1,0 +1,105 @@
+#home-content {
+  @media ($desktop) {
+    display: grid;
+    grid-template-columns: 0.75fr 1fr;
+  }
+
+  #landing-welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    h1 {
+      font-weight: normal;
+      text-transform: uppercase;
+      font-size: 7.2rem;
+
+      @media ($mobile) {
+        font-size: 4rem;
+      }
+    }
+
+    p {
+      font-size: 3rem;
+      margin-top: 4rem;
+      margin-bottom: 10rem;
+
+      @media ($mobile) {
+        font-size: 1.4rem;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+      }
+
+      line-height: 1.5;
+      font-weight: lighter;
+    }
+
+    button {
+      padding: 1.5rem 7rem;
+      font-size: 2.5rem;
+      border-radius: 7rem;
+      background-color: transparent;
+      border: 3px solid $primary-color;
+      color: $primary-color;
+      cursor: pointer;
+      transition: all 250ms ease-in;
+
+      @media ($mobile) {
+        margin: 0 auto 4rem;
+      }
+    }
+
+    button:hover {
+      background-color: $primary-color;
+      color: $background-color;
+    }
+  }
+
+  #landing-image {
+    div {
+      text-align: center;
+      position: relative;
+
+      img {
+        width: 70%;
+        margin: 0 auto;
+        animation-name: bounce;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+      }
+    }
+
+    div::after {
+      content: "";
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      position: absolute;
+      background-color: $secondary-color;
+      width: 700px;
+      height: 700px;
+      @media ($mobile) {
+        width: 300px;
+        height: 300px;
+      }
+      z-index: -1;
+      border-radius: 100%;
+    }
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+
+  75% {
+    transform: translateY(-60px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
