@@ -10,6 +10,10 @@ nav {
     padding: 1rem;
   }
 
+  a + a {
+    margin-left: 2rem;
+  }
+
   a::before {
     position: absolute;
     content: "";

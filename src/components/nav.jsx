@@ -5,6 +5,7 @@ const Nav = () => {
     <nav>
       {/* This should be a Link when React Router is added */}
       <div className="container">
+        <Link to="/">Home</Link>
         <Link to="/browse">Browse Items</Link>
       </div>
     </nav>
