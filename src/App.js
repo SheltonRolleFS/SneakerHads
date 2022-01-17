@@ -1,7 +1,14 @@
+// Import Pages
+import Home from "./pages/Home";
+
+// Import Components
+import Nav from "./components/nav";
+
 function App() {
   return (
     <div>
-      <h1>Hello World</h1>
+      <Nav />
+      <Home />
     </div>
   );
 }
