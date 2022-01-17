@@ -1,6 +1,15 @@
 .item-card {
   width: 600px;
   height: 300px;
+  margin-bottom: 3rem;
+
+  @media ($mobile) {
+    width: 325px;
+    height: 150px;
+    margin-bottom: 2rem;
+  }
+
+  margin: 0 auto;
   position: relative;
   overflow: hidden;
   color: transparent;
@@ -19,16 +28,23 @@
     bottom: 10%;
     left: 5%;
     width: 100%;
-    color: white;
+    color: $secondary-color;
     animation-name: slide-up;
     animation-duration: 1s;
 
     h1 {
-      font-size: 6rem;
+      @media ($desktop) {
+        font-size: 6rem;
+      }
+
+      @media ($mobile) {
+        font-size: 3.5rem;
+      }
     }
 
     p {
       font-size: 2rem;
+      color: white;
     }
   }
 }
